@@ -1,0 +1,58 @@
+.navbar{
+    height: 70px;
+    
+    .container{
+        display: flex;
+        align-items: center;
+        justify-content:space-between;
+        max-width: 1100px;
+        margin:0px auto;
+        padding: 12px 20px;
+
+        .left h1{
+            font-family: 'Righteous', cursive;;
+        }
+
+        .center{
+           display: flex;
+           gap: 40px;
+           font-weight: bold;
+           text-transform: uppercase;
+           font-size: 17px;
+
+           .item{
+            cursor: pointer;
+           }
+        }
+
+        .right{
+            display: flex;
+            gap: 20px;
+
+            .fav,.profile,.cart{
+                font-size: 30px;
+                cursor: pointer;
+            }
+
+            .cart-Icon,.fav-Icon{
+                position: relative;
+                span{
+                    position: absolute;
+                    width: 22px;
+                    height: 22px;
+                    border-radius: 50%;
+                    color: black;
+                    background-color: white;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    top: -8px;
+                    right: -12px;
+                    border: 0.5px solid lightgray;
+                }
+            }
+        }
+    }
+
+
+}
