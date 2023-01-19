@@ -1,3 +1,15 @@
+$spanish-gray: hsl(0, 0%, 60%);
+$sonic-silver: hsl(0, 0%, 47%);
+$eerie-black: hsl(0, 0%, 13%);
+$salmon-pink: hsl(353, 100%, 78%);
+$sandy-brown: hsl(29, 90%, 65%);
+$bittersweet: hsl(0, 100%, 70%);
+$ocean-green: hsl(152, 51%, 52%);
+$davys-gray: hsl(0, 0%, 33%);
+$cultured: hsl(0, 0%, 93%);
+$white: hsl(0, 100%, 100%);
+$onyx: hsl(0, 0%, 27%);
+
 .navbar{
     height: 70px;
     
@@ -19,6 +31,7 @@
            font-weight: bold;
            text-transform: uppercase;
            font-size: 17px;
+           color: $davys-gray;
 
            .item{
             cursor: pointer;
@@ -37,18 +50,19 @@
             .cart-Icon,.fav-Icon{
                 position: relative;
                 span{
+                    font-size: 14px;
+                    font-weight: bold;
                     position: absolute;
-                    width: 22px;
-                    height: 22px;
+                    width: 20px;
+                    height: 20px;
                     border-radius: 50%;
-                    color: black;
-                    background-color: white;
+                    color: white;
+                    background-color:$salmon-pink;
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    top: -8px;
-                    right: -12px;
-                    border: 0.5px solid lightgray;
+                    top: -7px;
+                    right: -8px;
                 }
             }
         }

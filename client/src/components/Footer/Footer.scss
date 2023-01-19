@@ -1,0 +1,122 @@
+$spanish-gray: hsl(0, 0%, 60%);
+$sonic-silver: hsl(0, 0%, 47%);
+$eerie-black: hsl(0, 0%, 13%);
+$salmon-pink: hsl(353, 100%, 78%);
+$sandy-brown: hsl(29, 90%, 65%);
+$bittersweet: hsl(0, 100%, 70%);
+$ocean-green: hsl(152, 51%, 52%);
+$davys-gray: hsl(0, 0%, 33%);
+$cultured: hsl(0, 0%, 93%);
+$white: hsl(0, 100%, 100%);
+$onyx: hsl(0, 0%, 27%);
+
+@mixin mobile{
+    @media screen and (max-width: 480px){
+        @content;
+    }
+}
+
+@mixin tablet{
+    @media screen and (max-width: 768px){
+        @content;
+    }
+}
+
+@mixin laptop{
+    @media screen and (max-width: 1200px){
+        @content;
+    }
+}
+
+
+.footer{
+
+    background-color:$eerie-black;
+    padding: 30px 0;
+
+    .container{
+        display: flex;
+        flex-direction: column;
+
+        .footer-top{
+            display: flex;
+            justify-content: space-around;
+            padding-bottom: 50px;
+            @include tablet{
+                flex-direction: column;
+                padding-left: 20px;
+                gap: 30px;
+            }
+            
+            ul{
+            display:flex;
+            flex-direction: column;
+            gap: 10px;
+            
+            li{
+                list-style: none;
+                
+                .item-title{
+                    text-transform: uppercase;
+                    font-size: 18px;
+                }
+                
+                a{
+                    text-decoration: none;
+                    color: $sonic-silver;
+                   &:hover{
+                      color: $salmon-pink;
+                   }
+                }
+                h2{
+                    color: $white;
+                }
+                &.address{
+                    color: $sonic-silver;
+                    display: flex;
+                    flex-direction: column;
+                    gap:10px;
+                    
+                    span{
+                        font-size: 16px;
+                        display: flex;
+                        gap: 10px;
+
+                        &.social-icons{
+                            .icon{
+                                font-size: 20px;
+                                &:hover{
+                                    color: $salmon-pink;
+                                    cursor: pointer;
+                                }
+                            }
+                        }
+                    }
+                    
+                }
+            }
+         }
+        }
+
+        .footer-bottom{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding-top: 50px;
+            border-top: 1px solid $sonic-silver;
+
+            .copyright{
+                color: $sonic-silver;
+                font-size: 14px;
+                text-transform: capitalize;
+                font-weight: 500;
+                margin-top: 20px;
+                a{
+                    color: inherit;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}

@@ -2,9 +2,9 @@ import React from 'react'
 import './Navbar.scss'
 
 // ICONS
-import PersonIcon from '@mui/icons-material/Person';
-import FavoriteIcon from '@mui/icons-material/Favorite';
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
+import LocalMallOutlinedIcon from '@mui/icons-material/LocalMallOutlined';
+import PersonOutlineOutlinedIcon from '@mui/icons-material/PersonOutlineOutlined';
 
 const Navbar = () => {
   return (
@@ -20,13 +20,13 @@ const Navbar = () => {
                 <div className="item">Contact</div>
             </div>
             <div className="right">
-                  <PersonIcon className='profile'/>
+                  <PersonOutlineOutlinedIcon className='profile'/>
                   <div className='fav-Icon'>
-                  <FavoriteIcon className='fav'/>
+                  <FavoriteBorderIcon className='fav'/>
                   <span>2</span>
                   </div>
                   <div className='cart-Icon'>
-                  <ShoppingCartIcon className='cart'/>
+                  <LocalMallOutlinedIcon className='cart'/>
                   <span>1</span>
                   </div>
             </div>
