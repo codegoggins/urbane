@@ -22,10 +22,9 @@
 
 
                 // NAVBAR TOOGLE MENU
-                const[open,setOpen] = useState(true);
+                const[open,setOpen] = useState(false);
 
-                const handleOpen = ()=>{
-                  console.log("hello")
+                const handleOpen = (e)=>{
                   setOpen(!open);
                 }
 
@@ -54,17 +53,19 @@
                           </div>
                     </div>
                     <div className='bottom-menu'>
-                              <div className='bottom-icon' onClick={handleOpen}>
+                              <div className='bottom-icon'>
                               <HomeOutlinedIcon fontSize='large'/>
                               </div>
                               <div className='bottom-icon'>
                               <FavoriteBorderIcon fontSize='large'/>
+                              <span>2</span>
                               </div>
                               <div className='bottom-icon'>
                               <LocalMallOutlinedIcon fontSize='large'/>
+                              <span>1</span>
                               </div>
                               <div className='bottom-icon'>
-                              <MoreHorizOutlinedIcon fontSize='large'/>
+                              <MoreHorizOutlinedIcon fontSize='large' onClick={handleOpen}/>
                               </div>
                     </div>
                     <div className={open ? `side-menu open-side-menu`:`side-menu`}>

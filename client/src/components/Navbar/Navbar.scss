@@ -1,192 +1,207 @@
-$spanish-gray: hsl(0, 0%, 60%);
-$sonic-silver: hsl(0, 0%, 47%);
-$eerie-black: hsl(0, 3%, 7%);
-$salmon-pink: hsl(353, 100%, 78%);
-$sandy-brown: hsl(29, 90%, 65%);
-$bittersweet: hsl(0, 100%, 70%);
-$ocean-green: hsl(152, 51%, 52%);
-$davys-gray: hsl(0, 0%, 33%);
-$cultured: hsl(0, 0%, 93%);
-$white: hsl(0, 100%, 100%);
-$onyx: hsl(0, 0%, 27%);
+                $spanish-gray: hsl(0, 0%, 60%);
+                $sonic-silver: hsl(0, 0%, 47%);
+                $eerie-black: hsl(0, 3%, 7%);
+                $salmon-pink: hsl(353, 100%, 78%);
+                $sandy-brown: hsl(29, 90%, 65%);
+                $bittersweet: hsl(0, 100%, 70%);
+                $ocean-green: hsl(152, 51%, 52%);
+                $davys-gray: hsl(0, 0%, 33%);
+                $cultured: hsl(0, 0%, 93%);
+                $white: hsl(0, 100%, 100%);
+                $onyx: hsl(0, 0%, 27%);
 
-@mixin mobile{
-    @media screen and (max-width: 480px){
-        @content;
-    }
-}
-
-@mixin tablet{
-    @media screen and (max-width: 768px){
-        @content;
-    }
-}
-
-@mixin laptop{
-    @media screen and (max-width: 1200px){
-        @content;
-    }
-}
-
-.navbar{
-    height: 70px;
-
-    
-    .container{
-        display: flex;
-        align-items: center;
-        justify-content:space-between;
-        max-width: 1100px;
-        margin:0px auto;
-        padding: 12px 20px;
-        @include mobile{
-            padding: 10px 15px;
-        }
-
-        .left{ 
-            h1{
-                font-family: 'Righteous', cursive;
-            }
-            @include tablet{
-                width: 100%;
-                text-align: center;
-            }
-        }
-
-        .center{
-           display: flex;
-           gap: 40px;
-           font-weight: bold;
-           text-transform: uppercase;
-           font-size: 17px;
-           color: $davys-gray;
-           @include tablet{
-            display: none;
-           }
-           @include mobile{
-              display: none;
-           }
-
-
-           .item{
-            cursor: pointer;
-           }
-        }
-
-        .right{
-            display: flex;
-            gap: 20px;
-
-            .fav,.profile,.cart{
-                font-size: 30px;
-                cursor: pointer;
-            }
-
-            .cart-Icon,.fav-Icon{
-                position: relative;
-                span{
-                    font-size: 14px;
-                    font-weight: bold;
-                    position: absolute;
-                    width: 20px;
-                    height: 20px;
-                    border-radius: 50%;
-                    color: white;
-                    background-color:$salmon-pink;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    top: -7px;
-                    right: -8px;
+                @mixin mobile{
+                    @media screen and (max-width: 480px){
+                        @content;
+                    }
                 }
-            }
-            @include tablet{
-                display: none;
-            }
-        }
-    }
-    .bottom-menu{
-        z-index: 1;
-        visibility: hidden;
-        width: 100%;
-        position:fixed;
-        padding: 10px;
-        right: 0;
-        bottom: 0;
-        height: 55px;
-        width:100%;
-        display: flex;
-        align-items:center;
-        justify-content:center;
-        gap: 40px;
-        background-color:white;
 
-        @include tablet{
-             visibility: visible;
-        }
+                @mixin tablet{
+                    @media screen and (max-width: 768px){
+                        @content;
+                    }
+                }
 
-        .bottom-icon{
-            cursor: pointer;
-        }
-    }
+                @mixin laptop{
+                    @media screen and (max-width: 1200px){
+                        @content;
+                    }
+                }
+
+                .navbar{
+                    height: 70px;
+
+                    
+                    .container{
+                        display: flex;
+                        align-items: center;
+                        justify-content:space-between;
+                        max-width: 1100px;
+                        margin:0px auto;
+                        padding: 12px 20px;
+                        @include mobile{
+                            padding: 10px 15px;
+                        }
+
+                        .left{ 
+                            h1{
+                                font-family: 'Righteous', cursive;
+                            }
+                            @include tablet{
+                                width: 100%;
+                                text-align: center;
+                            }
+                        }
+
+                        .center{
+                        display: flex;
+                        gap: 40px;
+                        font-weight: bold;
+                        text-transform: uppercase;
+                        font-size: 17px;
+                        color: $davys-gray;
+                        @include tablet{
+                            display: none;
+                        }
+                        @include mobile{
+                            display: none;
+                        }
 
 
-    // SIDE MENU
+                        .item{
+                            cursor: pointer;
+                        }
+                        }
 
-    .side-menu{
-        display: none;
-        visibility: hidden;
-        position:fixed;
-        width: 70%;
-        padding: 30px 60px;
-        z-index: 2;
-        top: 0;
-        left: -100%;
-        height: 100vh;
-        background-color:$eerie-black;
-        color: white;
-        display: flex;
-        flex-direction: column;
-        align-items:flex-start;
-        justify-content: space-around;
-        transition:all 1s ease-in-out;
+                        .right{
+                            display: flex;
+                            gap: 20px;
 
-        @include tablet{
-          
-            &.open-side-menu{
-            visibility: visible;
-            display: flex;
-            left: 0%;
+                            .fav,.profile,.cart{
+                                font-size: 30px;
+                                cursor: pointer;
+                            }
 
-            }
-        }
+                            .cart-Icon,.fav-Icon{
+                                position: relative;
+                                span{
+                                    font-size: 14px;
+                                    font-weight: bold;
+                                    position: absolute;
+                                    width: 20px;
+                                    height: 20px;
+                                    border-radius: 50%;
+                                    color: white;
+                                    background-color:$salmon-pink;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    top: -7px;
+                                    right: -8px;
+                                }
+                            }
+                            @include tablet{
+                                display: none;
+                            }
+                        }
+                    }
+                    .bottom-menu{
+                        z-index: 1;
+                        visibility: hidden;
+                        width: 100%;
+                        position:fixed;
+                        padding: 10px;
+                        right: 0;
+                        bottom: 0;
+                        height: 60px;
+                        width:100%;
+                        display: flex;
+                        align-items:center;
+                        justify-content:center;
+                        gap: 40px;
+                        background-color:white;
 
-        .side-menu-top{
-            width: 100%;
-            display: flex;
-            align-items: center;
-            gap: 30px;
-            justify-content: space-between;
-            font-family: 'Righteous', cursive;
-            .close{
-                cursor: pointer;
-            }
-        }
+                        @include tablet{
+                            visibility: visible;
+                        }
 
-        .side-menu-items{
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            justify-content: center;
-            gap: 30px;
-            font-size: 20px;
-            font-weight: 500;
+                        .bottom-icon{
+                            cursor: pointer;
+                            position: relative;
+                            span{
+                                font-size: 14px;
+                                font-weight: bold;
+                                position: absolute;
+                                width: 20px;
+                                height: 20px;
+                                border-radius: 50%;
+                                color: white;
+                                background-color:$salmon-pink;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                top: -7px;
+                                right: -8px; 
+                            }
+                        }
+                    }
 
-            .side-menu-item{
-                display: flex;
-                gap: 10px;
 
-            }
-        }
-    }
-}
+                    // SIDE MENU
+
+                    .side-menu{
+                        display: none;
+                        visibility: hidden;
+                        position:fixed;
+                        width: 70%;
+                        padding: 30px 60px;
+                        z-index: 2;
+                        top: 0;
+                        left: -100%;
+                        height: 100vh;
+                        background-color:$eerie-black;
+                        color: white;
+                        display: flex;
+                        flex-direction: column;
+                        align-items:flex-start;
+                        justify-content: space-around;
+                        transition:all 1s ease-in-out;
+
+                        @include tablet{
+                        
+                            &.open-side-menu{
+                            visibility: visible;
+                            display: flex;
+                            left: 0%;
+                            }
+                        }
+
+                        .side-menu-top{
+                            width: 100%;
+                            display: flex;
+                            align-items: center;
+                            gap: 30px;
+                            justify-content: space-between;
+                            font-family: 'Righteous', cursive;
+                            .close{
+                                cursor: pointer;
+                            }
+                        }
+
+                        .side-menu-items{
+                            display: flex;
+                            flex-direction: column;
+                            align-items: flex-start;
+                            justify-content: center;
+                            gap: 30px;
+                            font-size: 20px;
+                            font-weight: 500;
+
+                            .side-menu-item{
+                                display: flex;
+                                gap: 10px;
+
+                            }
+                        }
+                    }
+                }
